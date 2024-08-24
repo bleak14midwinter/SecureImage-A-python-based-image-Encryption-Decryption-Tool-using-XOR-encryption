@@ -59,8 +59,27 @@ Reset: Reset the displayed image to its original form using the "Reset" button.<
 
 
 
+Steps to package your application:
 
+1.Install PyInstaller:
 
+   pip install pyinstaller
+
+2.Package your script: Navigate to the directory where your script is located and run the following command:
+
+   pyinstaller --onefile --noconsole your_script.py
+   
+--onefile: Bundles everything into a single executable file.
+--noconsole: (optional) Suppresses the terminal window when running the GUI application.
+Locate the Executable: After the command runs, you’ll find the executable in the dist directory.
+
+3. Add Application Icons:
+To make your application look professional, you can add an icon:
+
+Convert your icon image to .ico format if it isn't already.
+Use the --icon option with PyInstaller:
+
+   pyinstaller --onefile --noconsole --icon=your_icon.ico your_script.py
 
 
 <h1>Example Workflow</h1><br>
